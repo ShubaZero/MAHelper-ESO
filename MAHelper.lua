@@ -229,3 +229,7 @@ end
 
 SLASH_COMMANDS["/shuba"] = bar
 SLASH_COMMANDS["/st"] = stampa
+
+function Prova()
+	
+end
