@@ -230,5 +230,6 @@ end
 SLASH_COMMANDS["/shuba"] = bar
 SLASH_COMMANDS["/st"] = stampa
 
-
-ddadadd2d 2
+function DioPorc()
+	d("Lessgooo")
+end
