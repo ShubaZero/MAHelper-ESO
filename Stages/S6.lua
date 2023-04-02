@@ -217,7 +217,7 @@ function  Set6.OnTitleAnnounced(eventcode, title)
 end
 
 function  Set6.OnPlayerDeath( eventCode,  unitTag,  isDead)
-	if isDead and unitTag == "player" then 
+	if isDead and unitTag == "player" then
 		MAHelper.RemoveIcons()
 		MAHelper.ListAddPosition(CS , 1)
 	end
