@@ -205,12 +205,14 @@ function Set6.OnCheckingEffect( eventCode,  changeType,  effectSlot,  effectName
 end
 
 function  Set6.OnTitleAnnounced(eventcode, title)
-	NumK  = 0
-	CurrWeave = 1
 	CS = MAHelper.OnTitleReturnRound(title)
 	if CS >= 1 then
 		MAHelper.RemoveIcons()
 		MAHelper.ListAddPosition(CS , 1)
+		NumK  = 0
+		CurrWeave = 1
+		token = false
+		zo_callLater(function() token = true end, 6000)
 	end
 end
 
