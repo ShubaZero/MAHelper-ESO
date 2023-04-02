@@ -171,7 +171,8 @@ function Set5.OnCheckingEffect( eventCode,  changeType,  effectSlot,  effectName
 	if effectName == "Portal Spawn" and NumK ~= 0 and token then
 		if CS == 3 then
 			token = false
-			NumK = NumK - Set5.rounds[CS].Waves[CurrWeave].nMOB 
+			NumK = NumK - Set5.rounds[CS].Waves[CurrWeave].nMOB
+			d("Portale puerco dio")
 			CurrWeave = CurrWeave + 1
 			MAHelper.RemoveIcons()
 			MAHelper.ListAddPosition(CS , CurrWeave)
@@ -187,6 +188,8 @@ function  Set5.OnTitleAnnounced(eventcode, title)
 		CurrWeave = 1
 		MAHelper.RemoveIcons()
 		MAHelper.ListAddPosition(CS , 1)
+		token = false
+		zo_callLater(function() token = true end, 5000)
 	end
 end
 
@@ -214,6 +217,7 @@ function Set5.OnUnitKilled(eventCode,   result,  isError,  abilityName,  ability
 			MAHelper.RemoveIcons()
 			do return end
 		end
+		d("Killato mob:" ..targetName .."  e numK:" ..NumK)
 		MAHelper.RemoveIcons()
 		CurrWeave = CurrWeave +1
 		if CurrWeave <= Set5.rounds[CS].nWave then
