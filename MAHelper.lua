@@ -232,5 +232,5 @@ SLASH_COMMANDS["/st"] = stampa
 
 function DioPorc()
 	d("Lessgooo")
-	llll
+	llll 
 end
