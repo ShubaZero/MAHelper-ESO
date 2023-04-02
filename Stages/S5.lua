@@ -83,8 +83,8 @@ Set5={
 					Mobs = {
 						[1] = {posx =166870,posy =50019,posz =101030,X=0.52514791488647,Y=0.51627218723297, texture = "MAHelper/Icons/Signal2.dds", c = 1,}, 
 						[2] = {posx =167619,posy =50012,posz =100096,X=0.53698223829269,Y=0.50147926807404, texture = "MAHelper/Icons/Signal2.dds", c = 1,}, 
-						[3] = {posx =163311,posy =50032,posz =98348,X=0.47337278723717,Y=0.47633135318756, texture = "MAHelper/Icons/Signal2.dds", c = 1,},
-						[4] = {posx =163311,posy =50032,posz =98348,X=0.47337278723717,Y=0.47633135318756, texture = "MAHelper/Icons/Signal2.dds", c = 1,},
+						[3] = {posx =165958,posy =49955,posz =100564,X=0.51183432340622,Y=0.5088757276535, texture = "MAHelper/Icons/Signal2.dds", c = 1,},
+						[4] = {posx =166476,posy =49975,posz =99051,X=0.51923078298569,Y=0.48668637871742, texture = "MAHelper/Icons/Signal2.dds", c = 1,},
 					},
 				},
 				[3] = {
@@ -92,8 +92,8 @@ Set5={
 					Mobs = {
 						[1] = {posx =164948,posy =50024,posz =97943,X=0.49704143404961,Y=0.47041419148445, texture = "MAHelper/Icons/Signal3.dds", c = 1,}, 
 						[2] = {posx =163533,posy =50015,posz =97470,X=0.47633135318756,Y=0.46301776170731, texture = "MAHelper/Icons/Signal3.dds", c = 1,}, 
-						[3] = {posx =163533,posy =50015,posz =97470,X=0.47633135318756,Y=0.46301776170731, texture = "MAHelper/Icons/Signal3.dds", c = 1,}, 
-						[4] = {posx =163533,posy =50015,posz =97470,X=0.47633135318756,Y=0.46301776170731, texture = "MAHelper/Icons/Signal3.dds", c = 1,}, 
+						[3] = {posx =163020,posy =50012,posz =98369,X=0.46893492341042,Y=0.47633135318756, texture = "MAHelper/Icons/Signal3.dds", c = 1,},
+						[4] = {posx =163832,posy =50017,posz =99029,X=0.48076921701431,Y=0.48668637871742, texture = "MAHelper/Icons/Signal3.dds", c = 1,},
 					},
 				},
 			},
@@ -172,7 +172,6 @@ function Set5.OnCheckingEffect( eventCode,  changeType,  effectSlot,  effectName
 		if CS == 3 then
 			token = false
 			NumK = NumK - Set5.rounds[CS].Waves[CurrWeave].nMOB
-			d("Portale puerco dio")
 			CurrWeave = CurrWeave + 1
 			MAHelper.RemoveIcons()
 			MAHelper.ListAddPosition(CS , CurrWeave)
@@ -189,7 +188,7 @@ function  Set5.OnTitleAnnounced(eventcode, title)
 		MAHelper.RemoveIcons()
 		MAHelper.ListAddPosition(CS , 1)
 		token = false
-		zo_callLater(function() token = true end, 5000)
+		zo_callLater(function() token = true end, 6000)
 	end
 end
 
@@ -217,7 +216,6 @@ function Set5.OnUnitKilled(eventCode,   result,  isError,  abilityName,  ability
 			MAHelper.RemoveIcons()
 			do return end
 		end
-		d("Killato mob:" ..targetName .."  e numK:" ..NumK)
 		MAHelper.RemoveIcons()
 		CurrWeave = CurrWeave +1
 		if CurrWeave <= Set5.rounds[CS].nWave then
