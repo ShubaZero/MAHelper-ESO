@@ -296,9 +296,6 @@ function Set9.OnUnitKilled(eventCode,   result,  isError,  abilityName,  ability
 		MAHelper.RemoveIcons()
 		CurrWeave = CurrWeave +1
 		d("Aumento per le kill")
-		if CS == 6 then 
-			Set9.RegEventsLoader()
-		end
 		if CurrWeave <= Set9.rounds[CS].nWave then
 			NumK = 0			
 			MAHelper.ListAddPosition(CS, CurrWeave)		
