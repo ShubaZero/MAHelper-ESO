@@ -267,6 +267,7 @@ function  Set9.OnTitleAnnounced(eventcode, title)
 	CS = MAHelper.OnTitleReturnRound(title)
 	if CS >= 1 then
 		NumK = 0
+		CurrWeave = 1
 		MAHelper.RemoveIcons()
 		MAHelper.ListAddPosition(CS , 1)
 	end
@@ -300,8 +301,6 @@ function Set9.OnUnitKilled(eventCode,   result,  isError,  abilityName,  ability
 			NumK = 0			
 			MAHelper.ListAddPosition(CS, CurrWeave)		
 		else
-			CurrWeave = 1
-			NumK=0
 			CS = CS +1
 			if CS <= Set9.nR then 			
 				MAHelper.ListAddPosition(CS, 1)	
