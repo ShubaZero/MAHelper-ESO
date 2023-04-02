@@ -250,15 +250,16 @@ function Set9.OnCheckingEffect( eventCode,  changeType,  effectSlot,  effectName
 		CurrWeave = CurrWeave + 1
 		MAHelper.RemoveIcons()
 		MAHelper.ListAddPosition(CS , CurrWeave)
-		zo_callLater(function() token = true end, 3000)
+		zo_callLater(function() token = true end, 5000)
 	end 
 	if effectName == "Portal Spawn" and NumK ~= 0 and token then
+		d("spawn portale aumento wave")
 		token = false
 		NumK = NumK - Set9.rounds[CS].Waves[CurrWeave].nMOB 
 		CurrWeave = CurrWeave + 1
 		MAHelper.RemoveIcons()
 		MAHelper.ListAddPosition(CS , CurrWeave)
-		zo_callLater(function() token = true end, 3000)
+		zo_callLater(function() token = true end, 5000)
 	end
 end
 
@@ -283,10 +284,10 @@ end
 function Set9.OnUnitKilled(eventCode,   result,  isError,  abilityName,  abilityGraphic,   abilityActionSlotType,  sourceName,   sourceType,   targetName,   targetType,  hitValue,   powerType,   damageType,  log,  sourceUnitId,  targetUnitId,  abilityId,  overflow)
 	if CS == 6 then
 		if targetName ~= "Voriak Solkyn" then
-			do return end
 		else
 			MAHelper.ListAddPosition(7,1)
 		end
+		do return end
 	end
 	NumK = NumK + 1
 	if NumK >= Set9.rounds[CS].Waves[CurrWeave].nMOB then
@@ -294,6 +295,7 @@ function Set9.OnUnitKilled(eventCode,   result,  isError,  abilityName,  ability
 		zo_callLater(function() token = true end, 4000)
 		MAHelper.RemoveIcons()
 		CurrWeave = CurrWeave +1
+		d("Aumento per le kill")
 		if CS == 6 then 
 			Set9.RegEventsLoader()
 		end

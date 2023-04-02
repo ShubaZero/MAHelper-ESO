@@ -216,8 +216,6 @@ end
 
 function  Set6.OnPlayerDeath( eventCode,  unitTag,  isDead)
 	if isDead and unitTag == "player" then
-		CurrWeave = 1
-		NumK = 0
 		MAHelper.RemoveIcons()
 		MAHelper.ListAddPosition(CS , 1)
 	end
