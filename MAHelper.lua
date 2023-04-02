@@ -225,7 +225,7 @@ end
 function stampa(extra)
 	local playerX, playerY = GetMapPlayerPosition("player")
 	d("X3=" ..playerX ..",Y3=" ..playerY ..",")
+	d("Leshere")
 end
-
 SLASH_COMMANDS["/shuba"] = bar
 SLASH_COMMANDS["/st"] = stampa
