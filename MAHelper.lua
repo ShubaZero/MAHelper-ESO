@@ -2,6 +2,7 @@ MAHelper = {
 	name = "MAHelper",
 	Versione = "0.1.1",
 }
+
 Set = nil
 local MY_TEXTURES = {
 	"MAHelper/Icons/Signal.dds",
