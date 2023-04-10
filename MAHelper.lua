@@ -15,6 +15,12 @@ local MY_TEXTURES = {
 	"MAHelper/Icons/BossRobot1.dds",
 	"MAHelper/Icons/BossRobot2.dds",
 	"MAHelper/Icons/BossRobot3.dds",
+	"MAHelper/Icons/BossRobot3.dds",
+	"MAHelper/Icons/BossRobot3.dds",
+	"MAHelper/Icons/BossRobot3.dds",
+	"MAHelper/Icons/BossRobot3.dds",
+	"MAHelper/Icons/BossRobot3.dds",
+	"MAHelper/Icons/BossRobot3.dds",
 }
 icons = {}
 --def settings
@@ -62,9 +68,13 @@ function MAHelper.ListAddPosition( r,  w)
 		TY = iconData.Y
 
 		local playerX, playerY = GetMapPlayerPosition("player")
-		if math.abs(playerX) < 0.3 and Set.name == "Igneous Cistern" then
+		if playerX < 0.3 and Set.name == "Igneous Cistern" then
 			TX = iconData.X2
 			TY = iconData.Y2
+			if playerX < 0 then
+				TX = iconData.X3
+				TY = iconData.Y3
+			end
 		end
 		if savedVariable.ArrowV  then
 			local index = LibSimpleArrowModS.SearchFreeArrow()

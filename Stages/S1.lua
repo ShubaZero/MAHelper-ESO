@@ -108,10 +108,9 @@ Set1={
 
 CurrWeave = 1
 NumK = 0
-CS = 1
+local CS = 1
 token = true
 function Set1.RegEventsLoader()
-	d("porcodio")
 	CS = 1
 	MAHelper.ListAddPosition(1,1)
 	EVENT_MANAGER:RegisterForEvent(Set1.name .. "PlayerDeath", EVENT_UNIT_DEATH_STATE_CHANGED, Set1.OnPlayerDeath)
